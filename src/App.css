@@ -1,42 +1,49 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/*
+	•	🍓 Strawberry Red: #ff6384 (Primary color)
+	•	🍃 Leaf Green: #77dd77 (Accent color)
+	•	🥛 Cream White: #fff5f5 (Background)
+	•	🌸 Soft Pink: #ffc2d1 (Secondary background or button hover)
+	•	🍫 Chocolate Brown: #663300 (Text or borders)
+*/
+/* Strawberry Theme Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fff5f5; /* Cream White */
+  color: #663300; /* Chocolate Brown */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1 {
+  color: #ff6384; /* Strawberry Red */
   text-align: center;
+  margin: 20px 0;
+  font-size: 2.5rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+button {
+  background-color: #ff6384; /* Strawberry Red */
+  color: #fff; /* White text */
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  background-color: #ffc2d1; /* Soft Pink */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+
+button li button {
+  margin-left: 10px;
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }

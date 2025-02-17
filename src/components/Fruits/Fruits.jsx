@@ -4,11 +4,12 @@ import { useState, useEffect } from 'react';
 import FruitForm from './FruitForm/FruitForm';
 import FruitList from './FruitList/FruitList';
 import { getAllFruits } from '../../services/fruitService';
+import FruitSearch from './FruitSearch/FruitSearch';
 
 function Fruits() {
   const [fruits, setFruits] = useState([]);
   const [collectedFruits, setCollectedFruits] = useState([]);
-  
+
   useEffect(() => {
     const fetchFruits = async () => {
       const allFruits = await getAllFruits();
@@ -49,11 +50,12 @@ function Fruits() {
 
   return (
     <>
+      <FruitSearch fruits={fruits} />
       <FruitList fruits={fruits} />
       <FruitForm addFruit={addFruit} />
       <div>
         <h1>Fruit Inventory</h1>
-        <div>
+        {/* <div>
           <h3>Available Fruits:</h3>
           <ul>
             {
@@ -67,8 +69,8 @@ function Fruits() {
               ))
             }
           </ul>
-        </div>
-        <div>
+        </div> */}
+        {/* <div>
           <h3>Your Collection</h3>
           <ul>
             {collectedFruits.map(fruit => (
@@ -78,7 +80,7 @@ function Fruits() {
               </li>
             ))}
           </ul> 
-        </div>
+        </div> */}
       </div>
     </>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { show } from '../../../services/fruitService'
-import FruitDetail from '../FruitDetail/FruitDetail';
+import FruitDetail from './FruitDetail/FruitDetail';
 import { useNavigate } from 'react-router-dom' 
 
 function FruitSearch() {

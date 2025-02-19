@@ -5,9 +5,13 @@ import FruitForm from './FruitForm/FruitForm';
 import FruitList from './FruitList/FruitList';
 import { getAllFruits } from '../../services/fruitService';
 import FruitSearch from './FruitSearch/FruitSearch';
+import { useLocation } from 'react-router';
+import FruitDetail from './FruitDetail/FruitDetail';
 
 function Fruits() {
   const [fruits, setFruits] = useState([]);
+  const { state } = useLocation();
+  const fruitData = state?.fruitData;
   const [collectedFruits, setCollectedFruits] = useState([]);
 
   useEffect(() => {
@@ -50,6 +54,13 @@ function Fruits() {
 
   return (
     <>
+    {
+    fruitData && 
+    <>
+    <h2>Searched Fruit Detail</h2>
+    <FruitDetail fruit={fruitData} />
+    </>
+    }
       <h1>Fruit List</h1>
       <FruitSearch fruits={fruits} />
       <FruitList fruits={fruits} />

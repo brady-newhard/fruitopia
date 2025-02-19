@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { show } from '../../../services/fruitService'
+import FruitDetail from '../FruitDetail/FruitDetail';
 
 function FruitSearch() {
     const [fruit, setFruit] = useState('')
@@ -32,6 +33,7 @@ function FruitSearch() {
             <button type="submit">Search</button>
             </form>
         </section>  
+        <FruitDetail fruit={fruitData} />
     </div>
   )
 }

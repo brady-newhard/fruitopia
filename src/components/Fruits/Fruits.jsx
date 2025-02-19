@@ -50,6 +50,7 @@ function Fruits() {
 
   return (
     <>
+      <h1>Fruit List</h1>
       <FruitSearch fruits={fruits} />
       <FruitList fruits={fruits} />
       <FruitForm addFruit={addFruit} />
